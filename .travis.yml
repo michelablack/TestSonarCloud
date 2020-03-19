@@ -1,4 +1,10 @@
 language: java
 jdk:
-   - openjdk8
-script: ant build
+- openjdk8
+addons:
+sonarcloud:
+organization: michelablack
+token: 784a826f1f7229a65cacc37e943c349dbbf214af
+script:
+- ant build
+- sonar-scanner
